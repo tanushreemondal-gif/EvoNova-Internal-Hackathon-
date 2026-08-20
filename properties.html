@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Properties</title>
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>Available Properties</h1>
+
+{% for property in properties %}
+
+<hr>
+<div class ="card">
+<img
+        src="{{ url_for('static',
+        filename='uploads/' + property.image) }}">
+
+<h3>{{ property.title }}</h3>
+
+<p>Rent: ₹{{ property.rent }}</p>
+
+<p>Location: {{ property.location }}</p>
+
+<p>Type: {{ property.property_type }}</p>
+
+<p>{{ property.description }}</p>
+
+{% endfor %}
+</div>
+</body>
+</html>

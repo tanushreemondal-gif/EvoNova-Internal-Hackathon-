@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub - Find Your Perfect Stay</title>
+
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="logo">🏠 RentHub</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/properties">Properties</a>
+        <a href="/login">Login</a>
+        <a href="/register" class="btn-nav">Register</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            ✨ Trusted PG, Hostel & House Rentals
+        </span>
+
+        <h1>
+            Find. Rent. Live.
+            <span>Your Dream Home.</span>
+        </h1>
+
+        <p>
+            Discover verified PGs, hostels, flats and rental homes
+            near your preferred location.
+        </p>
+
+        <form class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search city, area, hostel, flat...">
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+        <div class="hero-buttons">
+            <a href="/properties" class="primary-btn">
+                Browse Properties
+            </a>
+
+            <a href="/register" class="secondary-btn">
+                Get Started
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000"
+             alt="House">
+
+    </div>
+
+</section>
+
+
+</body>
+</html>

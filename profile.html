@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>My Profile</h1>
+
+<form method="POST">
+
+    <input
+        type="text"
+        name="full_name"
+        placeholder="Full Name"
+        value="{{ user.full_name or '' }}">
+
+    <br><br>
+
+    <input
+        type="text"
+        name="phone"
+        placeholder="Phone Number"
+        value="{{ user.phone or '' }}">
+
+    <br><br>
+
+    <input
+        type="text"
+        name="city"
+        placeholder="City"
+        value="{{ user.city or '' }}">
+
+    <br><br>
+
+    <textarea
+        name="bio"
+        placeholder="Tell us about yourself"
+        rows="5"
+        cols="40">{{ user.bio or '' }}</textarea>
+
+    <br><br>
+
+    <button type="submit">
+        Save Profile
+    </button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
